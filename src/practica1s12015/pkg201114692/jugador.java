@@ -12,16 +12,16 @@ package practica1s12015.pkg201114692;
 public class jugador {
     String nombre;
     int largolista;
+    boolean tipo;
     jugador siguiente;
-    Lplantas misplantas;
-    Lzombies miszombies;
+    Lplantas misplantas=new Lplantas();
+    Lzombies miszombies=new Lzombies();
     
-    public jugador(String nombre,int largo,jugador siguiente,Lplantas misplantas,Lzombies miszombies){
+    public jugador(String nombre,int largo,boolean tipo){
         this.nombre=nombre;
         this.largolista=largo;
+        this.tipo=tipo;
         this.siguiente=null;
-        this.misplantas=misplantas;
-        this.miszombies=miszombies;  
     }
 
     public String getNombre() {

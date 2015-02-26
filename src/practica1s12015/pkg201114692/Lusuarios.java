@@ -19,7 +19,8 @@ public class Lusuarios {
 
     public Lusuarios() {
         inicio = null;
-        siguiente=null;
+        siguiente = null;
+        aux = null;
     }
 
     public boolean lisatavacia() {
@@ -27,38 +28,38 @@ public class Lusuarios {
     }
 
     public void incertar_final(jugador nuevo_nodo) {
-        jugador nuevo=nuevo_nodo;
+        jugador nuevo = nuevo_nodo;
         if (inicio == null) {
             this.inicio = nuevo;
-            this.siguiente=nuevo;
-            nuevo.siguiente=nuevo;
+            this.siguiente = nuevo;
+            nuevo.siguiente = nuevo;
         } else {
-        nuevo.siguiente=null;
-               siguiente.siguiente=nuevo;
-               siguiente=nuevo;
+            nuevo.siguiente = null;
+            siguiente.siguiente = nuevo;
+            siguiente = nuevo;
         }
     }
-    
-    public void buscar(String nombre){
+
+    public void buscar(String nombre) {
         jugador auxiliar;
-        if(inicio!=null){
-            auxiliar=inicio;
-            while(auxiliar != null){
-                if(auxiliar.nombre.equals(nombre)){
-                    aux=auxiliar;
-                }else{
-                    auxiliar=auxiliar.getSiguiente();
+        if (inicio != null) {
+            auxiliar = inicio;
+            while (auxiliar != null) {
+                if (auxiliar.nombre.equals(nombre)) {
+                    aux = auxiliar;
+                } else {
+                    auxiliar = auxiliar.getSiguiente();
                 }
             }
         }
     }
-    
-    
-    public void eliminar_todo(){
-        if(inicio!=null){
+
+    public void eliminar_todo() {
+        if (inicio != null) {
+            inicio = null;
+            siguiente = null;
+        } else {
             JOptionPane.showMessageDialog(null, this, "No hay datos para eliminar", JOptionPane.WARNING_MESSAGE);
-        }else
-        inicio=null;
-        siguiente=null;
+        }
     }
 }

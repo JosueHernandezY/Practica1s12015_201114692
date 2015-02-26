@@ -5,7 +5,6 @@
  */
 package practica1s12015.pkg201114692;
 
-
 /**
  *
  * @author JB
@@ -17,9 +16,9 @@ public class Practica1s12015201114692 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        inicial in=new inicial();
+        boolean si = true;
+        inicial in = new inicial();
         in.setVisible(true);
-   
     }
-    
+
 }
