@@ -54,12 +54,50 @@ public class Lusuarios {
         }
     }
 
+    public jugador extrar_por_tipo(boolean tipo) {
+        jugador auxiliar;
+        if (inicio != null) {
+            auxiliar = inicio;
+            while (auxiliar != null) {
+                if (auxiliar.tipo == tipo) {
+                    return auxiliar;
+                } else {
+                    auxiliar = auxiliar.getSiguiente();
+                }
+            }
+        }
+        return null;
+    }
+
     public void eliminar_todo() {
         if (inicio != null) {
             inicio = null;
             siguiente = null;
         } else {
             JOptionPane.showMessageDialog(null, this, "No hay datos para eliminar", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+  public void remplazar(jugador actual) {
+        jugador auxiliar1, auxiliar2, aux3;
+        if (inicio != null) {
+            if (actual.nombre.equals(inicio.nombre)) {
+                auxiliar1 = inicio.siguiente;
+                inicio = actual;
+                inicio.siguiente=auxiliar1;
+            } else {
+                auxiliar1=inicio;
+                while(auxiliar1.siguiente!=null){
+                    if(auxiliar1.siguiente.nombre.equals(actual.nombre)){
+                        auxiliar2=auxiliar1.siguiente;
+                        aux3=auxiliar2.siguiente;
+                        actual.siguiente=aux3;
+                        auxiliar1.siguiente=actual;
+                    } 
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, this, "No se puede remplazar el nodo", JOptionPane.WARNING_MESSAGE);
         }
     }
 }

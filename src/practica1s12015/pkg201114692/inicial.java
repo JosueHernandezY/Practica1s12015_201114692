@@ -20,8 +20,10 @@ public class inicial extends javax.swing.JFrame {
         initComponents();
     }
     boolean JA1 = false, JA2 = false;
+    jugador j;
     zombie z;
     planta p;
+    int id = 0, cont = 0;
     Lusuarios listau = new Lusuarios();
     Lplantas listap = new Lplantas();
     Lzombies listaz = new Lzombies();
@@ -361,6 +363,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel26.setText("Ataque");
 
         jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel27.setText("75");
 
@@ -379,6 +386,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel34.setText("Disparo");
 
         jButton4.setText("Agregar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel35.setText("100");
 
@@ -387,6 +399,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel37.setText("Disparo");
 
         jButton5.setText("Agregar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jLabel38.setText("100");
 
@@ -395,6 +412,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel40.setText("Disparo");
 
         jButton6.setText("Agregar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel41.setText("20");
 
@@ -403,6 +425,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel43.setText("Directo");
 
         jButton7.setText("Agregar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jLabel44.setText("100");
 
@@ -417,10 +444,25 @@ public class inicial extends javax.swing.JFrame {
         jLabel49.setText("Disparo");
 
         jButton8.setText("Agregar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("Agregar");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         Bsiguinte.setText("Siguiente");
+        Bsiguinte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BsiguinteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout FagregarpLayout = new javax.swing.GroupLayout(Fagregarp.getContentPane());
         Fagregarp.getContentPane().setLayout(FagregarpLayout);
@@ -480,7 +522,7 @@ public class inicial extends javax.swing.JFrame {
                                         .addGroup(FagregarpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel41)
                                             .addComponent(jLabel44))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                                         .addGroup(FagregarpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel47)
                                             .addGroup(FagregarpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -507,7 +549,7 @@ public class inicial extends javax.swing.JFrame {
                                     .addComponent(jButton6)
                                     .addComponent(jButton8)
                                     .addComponent(jButton7))))
-                        .addGap(130, 130, 130))))
+                        .addGap(115, 115, 115))))
         );
         FagregarpLayout.setVerticalGroup(
             FagregarpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -645,6 +687,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel62.setText("Directo");
 
         jButton10.setText("Agregar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jLabel63.setText("Disco");
 
@@ -655,6 +702,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel66.setText("Directo");
 
         jButton11.setText("Agregar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel67.setText("ofice");
 
@@ -665,6 +717,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel70.setText("Directo");
 
         jButton12.setText("Agregar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jLabel71.setText("eastwood");
 
@@ -675,6 +732,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel74.setText("Disparo");
 
         jButton13.setText("Agregar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jLabel75.setText("Robot");
 
@@ -685,6 +747,11 @@ public class inicial extends javax.swing.JFrame {
         jLabel78.setText("Disparo");
 
         jButton14.setText("Agregar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jLabel79.setText("Zombie");
 
@@ -695,8 +762,18 @@ public class inicial extends javax.swing.JFrame {
         jLabel82.setText("Directo");
 
         jButton15.setText("Agregar");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         Bfinal.setText("Terminar");
+        Bfinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BfinalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout FagregarzLayout = new javax.swing.GroupLayout(Fagregarz.getContentPane());
         Fagregarz.getContentPane().setLayout(FagregarzLayout);
@@ -949,8 +1026,9 @@ public class inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (JA1 && JA2 == true) {
             this.setVisible(false);
-            Tablero t=new Tablero();
-            t.setVisible(true);
+            j = listau.extrar_por_tipo(true);
+            cont = j.largolista;
+            this.Fagregarp.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(rootPane, "Es necesario un jugador diferente para zombies y plantas, crea otro jugador. ", "Atención", JOptionPane.WARNING_MESSAGE);
         }
@@ -975,7 +1053,7 @@ public class inicial extends javax.swing.JFrame {
         int contadora = 0;
         nombre = Tnombrep.getText();
         contadora = Integer.parseInt(Tcontadorp.getText());
-        listau.incertar_final(new jugador(nombre, contadora,true));
+        listau.incertar_final(new jugador(nombre, contadora, true));
         JA1 = true;
         this.setEnabled(true);
         this.bplantas.setEnabled(false);
@@ -988,12 +1066,174 @@ public class inicial extends javax.swing.JFrame {
         int contadora = 0;
         nombre = Tnombrez.getText();
         contadora = Integer.parseInt(Tcontadorz.getText());
-        listau.incertar_final(new jugador(nombre, contadora,false));
+        listau.incertar_final(new jugador(nombre, contadora, false));
         JA2 = true;
         this.setEnabled(true);
         this.Bzombies.setEnabled(false);
         this.Fzombies.setVisible(false);
     }//GEN-LAST:event_BfinzActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("bambu", "bambu.png", 75, 120, id++, 0);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("cocoñon", "coco.png", 65, 120, id++, 1);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("colpulta", "col.png", 100, 50, id++, 1);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("Shotfreez", "frio.png", 100, 25, id++, 1);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("papa", "papa.png", 20, 200, id++, 0);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("Shot", "planta.png", 100, 20, id++, 1);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        planta pla = new planta("Multishot", "planta2.png", 100, 30, id++, 1);
+        if (cont != 0) {
+            j.misplantas.incertar_final(pla);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void BsiguinteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsiguinteActionPerformed
+        // TODO add your handling code here:
+        listau.remplazar(j);
+        j = listau.extrar_por_tipo(false);
+        cont = j.largolista;
+        this.Fagregarp.setVisible(false);
+        this.Fagregarz.setVisible(true);
+
+    }//GEN-LAST:event_BsiguinteActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        zombie zom = new zombie("Toro", "bull.png", 100, 150, id++, 0);
+        if (cont != 0) {
+            j.miszombies.incertar_final(zom);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        zombie zom = new zombie("Disco", "disco.png", 120, 50, id++, 0);
+        if (cont != 0) {
+            j.miszombies.incertar_final(zom);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        zombie zom = new zombie("ofice", "exib.png", 140, 35, id++, 0);
+        if (cont != 0) {
+            j.miszombies.incertar_final(zom);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        zombie zom = new zombie("eastwood", "oeste.png", 130, 25, id++, 1);
+        if (cont != 0) {
+            j.miszombies.incertar_final(zom);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        zombie zom = new zombie("Robot", "robot.png", 180, 25, id++, 1);
+        if (cont != 0) {
+            j.miszombies.incertar_final(zom);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        zombie zom = new zombie("Zombie", "zombie.png", 100, 25, id++, 0);
+        if (cont != 0) {
+            j.miszombies.incertar_final(zom);
+            cont--;
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Ya no puede agregar mas elementos ", "Atención", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void BfinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BfinalActionPerformed
+        // TODO add your handling code here:
+        listau.remplazar(j);
+        Tablero t=new Tablero();
+        t.setVisible(true);
+        Fagregarz.setVisible(false);
+    }//GEN-LAST:event_BfinalActionPerformed
 
     /**
      * @param args the command line arguments
